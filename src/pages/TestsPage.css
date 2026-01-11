@@ -1,0 +1,168 @@
+.tests-page {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 80vh;
+}
+
+.tests-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.tests-header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.tests-header p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Category Grid Styles */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.category-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.category-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.category-card h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.category-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Back Button */
+.back-button {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.back-button:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateX(-5px);
+}
+
+/* Existing Tests List Styles */
+.tests-section {
+    margin-bottom: 50px;
+}
+
+.tests-section h2 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.tests-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.test-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+}
+
+.test-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.test-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.test-icon {
+    font-size: 1.5rem;
+}
+
+.test-title {
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 1.05rem;
+}
+
+.test-action {
+    align-self: flex-end;
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.2s ease;
+}
+
+.test-card:hover .test-action {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Dark mode adjustments if needed based on main variables */
+@media (max-width: 768px) {
+    .tests-list {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}

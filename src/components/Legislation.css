@@ -1,0 +1,102 @@
+.legislation-page {
+    padding: 40px 20px;
+    min-height: 60vh;
+}
+
+.breadcrumbs {
+    margin-bottom: 30px;
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.breadcrumbs a {
+    color: var(--primary-color);
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.categories-section h2,
+.laws-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #dee2e6;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+    background-color: #f8f9fa;
+}
+
+.category-card h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.laws-list {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.law-item {
+    border-bottom: 1px solid #eee;
+}
+
+.law-item:last-child {
+    border-bottom: none;
+}
+
+.law-item a {
+    display: block;
+    padding: 15px 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.law-item a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary-color);
+    padding-left: 15px;
+}
