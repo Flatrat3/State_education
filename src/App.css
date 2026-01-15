@@ -1,1 +1,50 @@
 /* App-specific styles if needed */
+
+@keyframes bannerMove {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes wideBannerMove {
+    0% {
+        transform: translateX(-20%);
+    }
+
+    50% {
+        transform: translateX(20%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+/* New Marquee Animation: Starts off-screen right, moves all the way to off-screen left */
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+
+    /* -150% ensures it fully exits even if text is wide */
+}
+
+.animate-banner {
+    display: inline-flex;
+    /* Changed from inline-block to handle flex gap */
+    white-space: nowrap;
+    animation: marqueeScroll 15s linear infinite;
+    /* Constant speed */
+}

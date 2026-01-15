@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import './Tests.css';
 
 const testsData = [
-    { id: 1, title: 'Qanunvericilik', type: 'Full', questions: 100, time: '3 saat', price: 'Pulsuz' },
-    { id: 2, title: 'Məntiq Sınağı', type: 'Subject', questions: 40, time: '1 saat', price: '2 AZN' },
-    { id: 3, title: 'Ümumi Sınaq', type: 'Subject', questions: 40, time: '1 saat', price: '2 AZN' },
+    { id: 1, title: 'Qanunvericilik', type: 'Full', questions: 100, time: '1 saat', price: 'Pulsuz' },
+    { id: 2, title: 'Məntiq Sınağı', type: 'Subject', questions: 40, time: '1 saat', price: 'Yaxında zamanda yüklənəcək' },
+    { id: 3, title: 'Ümumi Sınaq', type: 'Subject', questions: 40, time: '3 saat', price: 'Pulsuz' },
 ];
 
 const Tests = () => {

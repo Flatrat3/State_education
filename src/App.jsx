@@ -7,6 +7,9 @@ import Legislation from './components/Legislation';
 import TestsPage from './pages/TestsPage';
 import './App.css';
 
+
+import Chatbot from './components/Chatbot';
+
 function App() {
   return (
     <Router>
@@ -21,6 +24,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <Chatbot />
       </div>
     </Router>
   );

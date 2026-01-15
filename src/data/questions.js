@@ -350,7 +350,7 @@ const questions = [
             C: "Azərbaycan Respublikasının Prezidentinin Fərmanı ilə",
             D: "Azərbaycan Respublikasının Nazirlər Kabinetinin qərarı ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 33,

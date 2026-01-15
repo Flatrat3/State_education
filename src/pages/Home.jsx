@@ -9,12 +9,15 @@ import DailyQuestion from '../components/DailyQuestion';
 import Motivation from '../components/Motivation';
 import RandomTest from '../components/RandomTest';
 
+import Advertising from '../components/Advertising';
+
 const Home = () => {
     return (
         <>
+            <Advertising />
             <Motivation />
-            <Hero />
             <DailyQuestion />
+            <Hero />
             <RandomTest />
             <YouTubeSection />
             <Subjects />
