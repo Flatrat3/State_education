@@ -2,23 +2,23 @@
 const questions = [
     {
         id: 1,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən dövlətin ali məqsədlərinə aiddir:",
+        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən dövlətin ali məqsədlərinə aiddir:\n1. dövlətin tərəfdar çıxdığı beynəlxalq müqavilələrə riayət olunmasının təmin edilməsi\n2. insan və vətəndaş hüquqlarının və azadlıqlarının təmin edilməsi\n3. ölkə vətəndaşlarına layiqli həyat səviyyəsinin təmin edilməsi\n4. iqtisadi inkişafa və tərəqqiyə nail olmaq",
         options: {
             A: "2, 3",
             B: "1, 2",
             C: "1, 4",
             D: "3, 4"
         },
-        answer: "D"
+        answer: "A"
     },
     {
         id: 2,
         question: "“Dövlət qulluqçularının etik davranış qaydaları haqqında” Azərbaycan Respublikasının Qanununa əsasən dövlət qulluqçusu birbaşa və ya yuxarı rəhbəri tərəfindən ona verilən əmrin, sərəncamın və ya tapşırığın qanuna və ya digər normativ hüquqi akta zidd olmasına əmindirsə, necə hərəkət etməlidir?",
         options: {
-            A: "istənilən halda yerinə yetirməlidir",
-            B: "yazılı şəkildə verilməsini tələb etməlidir",
-            C: "yazılı əsaslandırmanı təqdim etməlidir",
-            D: "imtinа etməlidir"
+            A: "istənilən halda ona rəhbərlik tərəfindən verilən əmri, sərəncamı və ya tapşırığı yerinə yetirməlidir",
+            B: "yuxarı rəhbərindən həmin göstərişin və ya əmrin yazılı şəkildə ona verilməsini tələb etməlidir",
+            C: "bu barədə yazılı əsaslandırmanı birbaşa və ya yuxarı rəhbərinə təqdim etməlidir",
+            D: "həmin əmr, sərəncam və ya tapşırığın yerinə yetirilməsindən imtina etməlidir"
         },
         answer: "C"
     },
@@ -26,10 +26,10 @@ const questions = [
         id: 3,
         question: "“Dövlət qulluqçularının etik davranış qaydaları haqqında” Qanuna əsasən etik davranış qaydalarına əməl olunmasına nəzarət edən dövlət orqanının rəhbərinin vəzifələrinə aid deyil:",
         options: {
-            A: "vəzifə bölgüsü aparmaq",
-            B: "profilaktik tədbirlər görmək",
-            C: "normativ aktları hazırlamaq",
-            D: "maarifləndirmə tədbirləri görmək"
+            A: "tabeliyində olan dövlət qulluqçuları arasında onların tutduqları vəzifələrə uyğun olaraq vəzifə bölgüsü aparmaq",
+            B: "etik davranış qaydalarının pozulmasının qarşısının alınması və profilaktikası üzrə tədbirlər görmək",
+            C: "öz səlahiyyətləri çərçivəsində bu qanunla müəyyən olunmuş etik davranış qaydalarını və onlara əməl olunması ilə bağlı təminatları konkretləşdirən normativ hüquqi aktları işləyib hazırlamalı və təsdiq etmək",
+            D: "dövlət qulluqçularının etik davranış məsələləri üzrə ictimai rəyin öyrənilməsi və bununla bağlı maarifləndirmənin həyata keçirilməsi üçün tədbirlər görmək"
         },
         answer: "D"
     },
@@ -53,7 +53,7 @@ const questions = [
             C: "qiymətli kağızlardan, rentadan və icarədən gəlir götürmək",
             D: "vəzifə maaşına əlavələr və mükafatlar almaq"
         },
-        answer: "A"
+        answer: "B"
     },
     {
         id: 6,
@@ -64,7 +64,7 @@ const questions = [
             C: "rəhbərin göstərişi ilə",
             D: "təşkilatların qarşılıqlı razılığı ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 7,
@@ -75,15 +75,15 @@ const questions = [
             C: "yalnız müsabiqə və müsahibə yolu ilə",
             D: "yalnız qulluqda yüksəliş yolu ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 8,
         question: "“Dövlət hakimiyyəti orqanlarında, idarə, təşkilat və müəssisələrində kargüzarlığın aparılmasına dair Təlimat”a əsasən aktın hazırlanması və tərtib edilməsi ilə bağlı düzgün deyil:",
         options: {
             A: "Aktın mətni giriş və şərh hissələrindən ibarət olmalıdır",
-            B: "Şərh hissəsində məqsəd, vəzifələr, faktlar və təkliflər göstərilir",
-            C: "Aktın mətninin sonunda qəbul edilən qərarlar göstərilməlidir",
+            B: "Şərh hissəsində akt tərtib edilməsinin məqsəd və vəzifələri, aparılmış işin mahiyyəti və xarakteri, müəyyən edilmiş faktlar, habelə nəticələr və təkliflər ifadə olunur.",
+            C: "Aktın mətninin sonunda (imzalardan qabaq) qəbul edilən qərarlar göstərilməlidir",
             D: "Giriş hissəsində aktın tərtib edilməsinin əsası göstərilir"
         },
         answer: "B"
@@ -108,7 +108,7 @@ const questions = [
             C: "müsabiqə və qulluqda yüksəliş yolu ilə",
             D: "müsabiqə və müsahibə yolu ilə"
         },
-        answer: "A"
+        answer: "D"
     },
     {
         id: 11,
@@ -125,9 +125,9 @@ const questions = [
         id: 12,
         question: "“Dövlət hakimiyyəti orqanlarında, idarə, təşkilat və müəssisələrində kargüzarlığın aparılmasına dair Təlimat”a əsasən rəsmi sənədlərin səhifələri necə nömrələnməlidir?",
         options: {
-            A: "yalnız rum rəqəmləri ilə",
-            B: "yalnız ərəb rəqəmləri ilə",
-            C: "20 və daha çox səhifə ərəb, digərləri ərəb və ya rum rəqəmləri ilə",
+            A: "İki və daha artıq səhifəsi olan sənədlər ikinci səhifədən başlayaraq ərəb rəqəmləri ilə nömrələnməlidir.",
+            B: "On və daha artıq səhifəsi olan sənədlər ikinci səhifədən başlayaraq rum rəqəmləri ilə nömrələnməlidir.",
+            C: "İyirmi və daha artıq səhifəsi olan sənədlər ərəb rəqəmləri ilə, digər sənədlər isə birinci səhifədən başlayaraq ərəb və ya rum rəqəmləri ilə nömrələnməlidir.",
             D: "rəsmi sənədlərin səhifələrinin nömrələnməsinə yol verilmir"
         },
         answer: "B"
