@@ -26,7 +26,6 @@ function App() {
             <Route path="/useful-links/legislation" element={<UsefulLinksLegislation />} />
             <Route path="/courses/legislation" element={<CoursesLegislation />} />
             <Route path="/teachers/legislation" element={<TeachersLegislation />} />
-            {/* Redirect other section links to Home for now if needed, or handle with ID scrolling */}
           </Routes>
         </main>
         <Footer />

@@ -245,7 +245,7 @@ const questions = [
             C: "təsdiq olunmayan elektron imza vasitələrindən istifadə edərkən",
             D: "sertifikatı olmayan elektron imzadan istifadə edərkən"
         },
-        answer: "A"
+        answer: "D"
     },
     {
         id: 23,
@@ -278,7 +278,7 @@ const questions = [
             C: "rəhbərin göstərişi ilə",
             D: "təşkilatların qarşılıqlı razılığı ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 26,
@@ -289,7 +289,7 @@ const questions = [
             C: "yalnız müsabiqə və müsahibə yolu ilə",
             D: "yalnız qulluqda yüksəliş yolu ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 27,
@@ -300,7 +300,7 @@ const questions = [
             C: "Aktın mətninin sonunda qəbul edilən qərarlar göstərilməlidir",
             D: "Giriş hissəsində aktın tərtib edilməsinin əsası göstərilir"
         },
-        answer: "A"
+        answer: "C"
     },
     {
         id: 28,
@@ -311,7 +311,7 @@ const questions = [
             C: "NMR Ali Məclisi sədrinin təqdimatı ilə AR Prezidenti təyin edir",
             D: "təqdimat olmadan AR Prezidenti birbaşa təyin edir"
         },
-        answer: "B"
+        answer: "C"
     },
     {
         id: 29,
@@ -333,18 +333,22 @@ const questions = [
             C: "statusu",
             D: "iyerarxiyası"
         },
-        answer: "B"
+        answer: "A"
     },
     {
         id: 31,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən dini mərasimlərin yerinə yetirilməsinə yol verilmir:",
+        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən dini mərasimlərin yerinə yetirilməsinə yol verilmir:\n" +
+            "1. ictimai qaydanı pozduqda\n" +
+            "2. qeyri-islam dinlərinə aid olduqda\n" +
+            "3. ictimai əxlaqa zidd olduqda\n" +
+            "4. kütləvi şəkildə həyata keçirildikdə",
         options: {
             A: "1, 3",
             B: "2, 3",
             C: "1, 4",
             D: "2, 4"
         },
-        answer: "C"
+        answer: "A"
     },
     {
         id: 32,
@@ -366,27 +370,27 @@ const questions = [
             C: "xüsusilə ağır cinayət törətməkdə məhkum olunubsa",
             D: "Azərbaycan Respublikasının vətəndaşlığından çıxıbsa"
         },
-        answer: "C"
+        answer: "A"
     },
     {
         id: 34,
-        question: "“Dövlət hakimiyyəti orqanlarında, idarə, təşkilat və müəssisələrində kargüzarlığın aparılmasına dair Təlimat”a əsasən sənəd hansı üsullarla təsdiq olunur?",
+        question: "Azərbaycan Respublikasının Konstitusiyanın birinci fəsli adlanır: ",
         options: {
-            A: "1, 2",
-            B: "1, 3",
-            C: "2, 3",
-            D: "1, 2, 3"
+            A: "Əsas insan və vətəndaş hüquq və azadlıqları ",
+            B: "Xalq hakimiyyəti",
+            C: "Dövlətin əsasları",
+            D: "Hakimiyyətin mənbəyi"
         },
-        answer: "C"
+        answer: "B"
     },
     {
         id: 35,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən dini etiqad azadlığı:",
+        question: "“Dövlət qulluğu haqqında” Azərbaycan Respublikasının Qanununa əsasən Naxçıvan Muxtar Respublikasın Ali Məhkəməsinin aparat rəhbəri vəzifəsi aiddir: ",
         options: {
-            A: "yalnız İslam dini üçün nəzərdə tutulur",
-            B: "məhdudlaşdırıla bilməz",
-            C: "qanunla məhdudlaşdırıla bilər",
-            D: "dövlət tərəfindən müəyyən edilir"
+            A: " inzibati vəzifələrin beşinci təsnifatına ",
+            B: " inzibati vəzifələrin üçüncü təsnifatına",
+            C: "inzibati vəzifələrin dördüncü təsnifatına",
+            D: "inzibati vəzifələrin ikinci təsnifatına "
         },
         answer: "D"
     },
@@ -399,7 +403,7 @@ const questions = [
             C: "ictimai qaydanı pozduqda və kütləvi şəkildə həyata keçirildikdə",
             D: "qeyri-islam dinlərinə aid olduqda və kütləvi şəkildə həyata keçirildikdə"
         },
-        answer: "D"
+        answer: "A"
     },
     {
         id: 37,
@@ -425,14 +429,14 @@ const questions = [
     },
     {
         id: 39,
-        question: "“Dövlət hakimiyyəti orqanlarında, idarə, təşkilat və müəssisələrində kargüzarlığın aparılmasına dair Təlimat”a əsasən sənəd hansı üsullarla təsdiq olunur?",
+        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən Milli Məclis hansı məsələyə dair ümumi qaydalar müəyyən edərkən 63 səs çoxluğu ilə qanunlar qəbul edir? ",
         options: {
-            A: "imzalanmaqla və möhür vurmaqla",
-            B: "təsdiqetmə qrifi ilə və möhür vurmaqla",
-            C: "imzalanmaqla və təsdiqetmə qrifi ilə",
-            D: "imzalanmaqla, təsdiqetmə qrifi ilə və möhür vurmaqla"
+            A: "Dövlət qulluğu ",
+            B: "Milli Məclisə seçkilər və Milli Məclis deputatlarının statusu ",
+            C: "Azərbaycan Respublikası Prezidentinin seçkiləri ",
+            D: "referendum "
         },
-        answer: "B"
+        answer: "A"
     },
     {
         id: 40,
@@ -443,7 +447,7 @@ const questions = [
             C: "yalnız müsabiqə yolu ilə",
             D: "yalnız müsahibə yolu ilə"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 41,
@@ -454,7 +458,7 @@ const questions = [
             C: "ən geci 15 gün ərzində",
             D: "ən geci 20 gün ərzində"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 42,
@@ -465,7 +469,7 @@ const questions = [
             C: "14.11.07",
             D: "14/11/07"
         },
-        answer: "B"
+        answer: "D"
     },
     {
         id: 43,
@@ -476,7 +480,7 @@ const questions = [
             C: "təsdiq olunmayan elektron imza vasitələrindən istifadə edərkən",
             D: "sertifikatı olmayan elektron imzadan istifadə edərkən"
         },
-        answer: "B"
+        answer: "D"
     },
     {
         id: 44,
@@ -498,7 +502,7 @@ const questions = [
             C: "daha aşağı təsnifatdan olan digər vəzifəyə keçirilməsi",
             D: "ixtisas dərəcəsinin bir pillə aşağı salınması"
         },
-        answer: "C"
+        answer: "B"
     },
     {
         id: 46,
@@ -520,7 +524,7 @@ const questions = [
             C: "Azərbaycan Respublikasının tərkibində muxtar dövlətdir",
             D: "Azərbaycan Respublikasının tərkibində federativ dövlətdir"
         },
-        answer: "A"
+        answer: "C"
     },
     {
         id: 48,
@@ -531,7 +535,7 @@ const questions = [
             C: "hər iki dildə şaquli şəkildə",
             D: "əvvəl xarici dildə, sonra dövlət dilində"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 49,
@@ -542,7 +546,7 @@ const questions = [
             C: "bir il altı ay",
             D: "bir il"
         },
-        answer: "C"
+        answer: "B"
     },
     {
         id: 50,
@@ -553,7 +557,7 @@ const questions = [
             C: "dövlət qulluğunun baş müşaviri",
             D: "dövlət qulluğunun kiçik müşaviri"
         },
-        answer: "A"
+        answer: "C"
     },
     {
         id: 51,
@@ -564,13 +568,13 @@ const questions = [
             C: "Prezidentin sərəncamı ilə",
             D: "Milli Məclisin qərarı ilə"
         },
-        answer: "C"
+        answer: "A"
     },
     {
         id: 52,
         question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun andı nə vaxt qəbul olunur?",
         options: {
-            A: "qulluq müqaviləsi bağlanarkən",
+            A: "Daimi dövlət qulluğuna qəbul olarkən müqaviləsi bağlanarkən",
             B: "ilk iş günündə",
             C: "vəzifəyə təyin edildikdən sonra",
             D: "sınaq müddətinin sonunda"
@@ -586,7 +590,7 @@ const questions = [
             C: "bir neçə vətəndaşın kollektiv müraciəti",
             D: "elektron formada təqdim edilmiş müraciət"
         },
-        answer: "D"
+        answer: "A"
     },
     {
         id: 54,
@@ -594,242 +598,12 @@ const questions = [
         options: {
             A: "yalnız dövlətə məxsusdur",
             B: "qanunla məhdudlaşdırıla bilməz",
-            C: "dövlət tərəfindən qorunur",
+            C: "qanunla qorunur",
             D: "yalnız fiziki şəxslərə aiddir"
         },
-        answer: "A"
-    },
-    {
-        id: 55,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən inzibati vəzifələrin tutulması üçün müsabiqə hansı hallarda keçirilir?",
-        options: {
-            A: "yalnız vakant vəzifə olduqda",
-            B: "bütün hallarda",
-            C: "qanunla müəyyən edilmiş hallarda",
-            D: "rəhbərin qərarı ilə"
-        },
-        answer: "D"
-    },
-    {
-        id: 56,
-        question: "“Dövlət hakimiyyəti orqanlarında kargüzarlıq” Təlimatına əsasən əmrin mətninin son hissəsi necə adlanır?",
-        options: {
-            A: "əsas hissə",
-            B: "sərəncam hissəsi",
-            C: "giriş hissəsi",
-            D: "şərh hissəsi"
-        },
-        answer: "D"
-    },
-    {
-        id: 57,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən Azərbaycan Respublikasında dövlət dili:",
-        options: {
-            A: "türk dilidir",
-            B: "Azərbaycan dilidir",
-            C: "Azərbaycan türkcəsidir",
-            D: "rəsmi olaraq müəyyən edilməyib"
-        },
-        answer: "B"
-    },
-    {
-        id: 58,
-        question: "“Elektron imza və elektron sənəd haqqında” Qanuna əsasən elektron sənədin hüquqi qüvvəsi nə ilə bərabərdir?",
-        options: {
-            A: "şifahi razılaşma ilə",
-            B: "kağız daşıyıcıdakı sənədlə",
-            C: "elektron məktubla",
-            D: "skan edilmiş sənədlə"
-        },
         answer: "C"
-    },
-    {
-        id: 59,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun xidməti fəaliyyətinin qiymətləndirilməsi məqsədi:",
-        options: {
-            A: "cəzalandırma",
-            B: "vəzifədən azad etmə",
-            C: "peşəkar inkişafın təmin edilməsi",
-            D: "maaşın azaldılması"
-        },
-        answer: "D"
-    },
-    {
-        id: 60,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən seçkilər:",
-        options: {
-            A: "dolayı keçirilir",
-            B: "ümumi, bərabər və birbaşa seçki hüququ əsasında keçirilir",
-            C: "yalnız proporsional sistemlə keçirilir",
-            D: "yalnız majoritar sistemlə keçirilir"
-        },
-        answer: "C"
-    },
-    {
-        id: 61,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun etik davranışına nəzarəti kim həyata keçirir?",
-        options: {
-            A: "Nazirlər Kabineti",
-            B: "müvafiq dövlət orqanının rəhbəri",
-            C: "Milli Məclis",
-            D: "Konstitusiya Məhkəməsi"
-        },
-        answer: "A"
-    },
-    {
-        id: 62,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən hər kəsin hüququdur:",
-        options: {
-            A: "istənilən vaxt vəzifədən imtina etmək",
-            B: "əmək azadlığı",
-            C: "dövlət hesabına biznes qurmaq",
-            D: "vergi ödəməmək"
-        },
-        answer: "B"
-    },
-    {
-        id: 63,
-        question: "“Vətəndaşların müraciətlərinə baxılması qaydası haqqında” Qanuna əsasən müraciətlərin baxılma müddəti uzadıla bilər:",
-        options: {
-            A: "istənilən halda",
-            B: "yalnız rəhbərin göstərişi ilə",
-            C: "əlavə araşdırma tələb etdikdə",
-            D: "müraciətçi istədikdə"
-        },
-        answer: "B"
-    },
-    {
-        id: 64,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusu hansı fəaliyyətlə məşğul ola bilməz?",
-        options: {
-            A: "elmi fəaliyyət",
-            B: "pedaqoji fəaliyyət",
-            C: "sahibkarlıq fəaliyyəti",
-            D: "yaradıcılıq fəaliyyəti"
-        },
-        answer: "A"
-    },
-    {
-        id: 65,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən insan hüquqlarının əsas prinsiplərindən biri:",
-        options: {
-            A: "seçicilik",
-            B: "bərabərlik",
-            C: "üstünlük",
-            D: "məhdudluq"
-        },
-        answer: "C"
-    },
-    {
-        id: 66,
-        question: "“Dövlət hakimiyyəti orqanlarında kargüzarlıq” Təlimatına əsasən sərəncamın mətni hansı hissələrdən ibarət olur?",
-        options: {
-            A: "giriş və əsas hissə",
-            B: "giriş və sərəncam hissəsi",
-            C: "şərh və sərəncam hissəsi",
-            D: "yalnız sərəncam hissəsi"
-        },
-        answer: "D"
-    },
-    {
-        id: 67,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən məhkəmə hakimiyyətini kim həyata keçirir?",
-        options: {
-            A: "Prezident",
-            B: "Milli Məclis",
-            C: "məhkəmələr",
-            D: "Nazirlər Kabineti"
-        },
-        answer: "D"
-    },
-    {
-        id: 68,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun iş vaxtı:",
-        options: {
-            A: "istənilən vaxt müəyyən edilir",
-            B: "qanunvericiliklə müəyyən edilir",
-            C: "rəhbərin qərarı ilə",
-            D: "qulluqçunun istəyi ilə"
-        },
-        answer: "B"
-    },
-    {
-        id: 69,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən hər kəsin borcudur:",
-        options: {
-            A: "siyasi fəaliyyətlə məşğul olmaq",
-            B: "vergi ödəmək",
-            C: "dövlət orqanlarında işləmək",
-            D: "seçkilərdə iştirak etmək"
-        },
-        answer: "C"
-    },
-    {
-        id: 70,
-        question: "“Elektron imza və elektron sənəd haqqında” Qanuna əsasən elektron imzanın etibarlılığı nə ilə təsdiqlənir?",
-        options: {
-            A: "parol ilə",
-            B: "elektron sertifikatla",
-            C: "skan edilmiş imza ilə",
-            D: "e-mail təsdiqi ilə"
-        },
-        answer: "A"
-    },
-    {
-        id: 71,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun əməkhaqqı:",
-        options: {
-            A: "yalnız maaşdan ibarətdir",
-            B: "maaş və əlavələrdən ibarətdir",
-            C: "yalnız mükafatlardan ibarətdir",
-            D: "rəhbər tərəfindən müəyyən edilir"
-        },
-        answer: "A"
-    },
-    {
-        id: 72,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən Azərbaycan Respublikasında ali icra hakimiyyəti orqanı:",
-        options: {
-            A: "Milli Məclis",
-            B: "Nazirlər Kabineti",
-            C: "Konstitusiya Məhkəməsi",
-            D: "Ali Məhkəmə"
-        },
-        answer: "B"
-    },
-    {
-        id: 73,
-        question: "“Vətəndaşların müraciətlərinə baxılması qaydası haqqında” Qanuna əsasən anonim müraciətlər:",
-        options: {
-            A: "baxılmadan saxlanılır",
-            B: "mütləq baxılır",
-            C: "yalnız elektron formada baxılır",
-            D: "məhkəməyə göndərilir"
-        },
-        answer: "B"
-    },
-    {
-        id: 74,
-        question: "Azərbaycan Respublikasının Konstitusiyasına əsasən kütləvi informasiya vasitələri:",
-        options: {
-            A: "dövlətə məxsusdur",
-            B: "senzuraya məruz qalır",
-            C: "azaddır",
-            D: "yalnız dövlət tərəfindən yaradılır"
-        },
-        answer: "C"
-    },
-    {
-        id: 75,
-        question: "“Dövlət qulluğu haqqında” Qanuna əsasən dövlət qulluqçusunun xidməti intizamı:",
-        options: {
-            A: "şəxsi məsələdir",
-            B: "qanunvericiliklə tənzimlənir",
-            C: "yalnız rəhbərin göstərişi ilə müəyyən edilir",
-            D: "etik normalara aid deyil"
-        },
-        answer: "A"
     }
+
 ];
 
 export default questions;

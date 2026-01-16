@@ -17,9 +17,9 @@ const Home = () => {
         <>
             <Advertising />
             <Motivation />
+            <Hero />
             <DailyQuestion />
             <ExamSchedule />
-            <Hero />
             <RandomTest />
             <YouTubeSection />
             <Subjects />
