@@ -8,6 +8,7 @@ import PdfSection from '../components/PdfSection';
 import DailyQuestion from '../components/DailyQuestion';
 import Motivation from '../components/Motivation';
 import RandomTest from '../components/RandomTest';
+import ExamSchedule from '../components/ExamSchedule';
 
 import Advertising from '../components/Advertising';
 
@@ -17,6 +18,7 @@ const Home = () => {
             <Advertising />
             <Motivation />
             <DailyQuestion />
+            <ExamSchedule />
             <Hero />
             <RandomTest />
             <YouTubeSection />

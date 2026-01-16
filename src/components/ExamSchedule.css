@@ -1,0 +1,169 @@
+.exam-schedule-container {
+    padding: 60px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.exam-schedule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.exam-schedule-header .section-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.last-updated {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.exam-table-wrapper {
+    overflow-x: auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+}
+
+.exam-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    /* Removed min-width as 3 columns fits easily on most screens */
+    font-size: 1rem;
+}
+
+.exam-table th,
+.exam-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.exam-table th {
+    background-color: #34495e;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.exam-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.exam-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.exam-error-message {
+    background-color: #fee;
+    color: #c0392b;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.exam-schedule-loading {
+    padding: 40px;
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+}
+
+.no-exams-message {
+    text-align: center;
+    padding: 30px;
+    color: #7f8c8d;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+.source-link {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #95a5a6;
+}
+
+.source-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.source-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .exam-schedule-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .exam-schedule-header .section-title {
+        text-align: center;
+    }
+
+    /* Keep table card layout for mobile validation */
+    .exam-table,
+    .exam-table thead,
+    .exam-table tbody,
+    .exam-table th,
+    .exam-table td,
+    .exam-table tr {
+        display: block;
+    }
+
+    .exam-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .exam-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .exam-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-width: unset;
+        text-align: right;
+    }
+
+    .exam-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: #34495e;
+        content: attr(data-label);
+        text-align: left;
+    }
+
+    .exam-table-wrapper {
+        box-shadow: none;
+        min-width: unset;
+    }
+}

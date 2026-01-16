@@ -22,6 +22,16 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-section">
+                    <h4>Müəllimlər</h4>
+                    <ul>
+                        <li><a href="#logic-teacher">Məntiq</a></li>
+                        <li><a href="#language-teacher">Ana dili</a></li>
+                        <li><Link to="/teachers/legislation">Qanunvericilik</Link></li>
+                        <li><a href="#informatics-teacher">İnformatika</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-section">
                     <h4>Əlaqə</h4>
                     <p>Email: info@dovletqullugu.az</p>
                     <p>Tel: +994 70 803 83 65</p>

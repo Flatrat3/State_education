@@ -11,6 +11,7 @@ import './App.css';
 import Chatbot from './components/Chatbot';
 import UsefulLinksLegislation from './pages/UsefulLinksLegislation';
 import CoursesLegislation from './pages/CoursesLegislation';
+import TeachersLegislation from './pages/TeachersLegislation';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/tests" element={<TestsPage />} />
             <Route path="/useful-links/legislation" element={<UsefulLinksLegislation />} />
             <Route path="/courses/legislation" element={<CoursesLegislation />} />
+            <Route path="/teachers/legislation" element={<TeachersLegislation />} />
             {/* Redirect other section links to Home for now if needed, or handle with ID scrolling */}
           </Routes>
         </main>
