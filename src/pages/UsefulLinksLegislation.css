@@ -1,0 +1,94 @@
+
+.useful-links-page {
+    padding: 120px 20px 60px;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-left: 5px solid #3498db;
+}
+
+.link-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.link-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.link-number {
+    font-weight: bold;
+    color: #3498db;
+    margin-right: 10px;
+    font-size: 1.1rem;
+    min-width: 25px;
+}
+
+.link-text {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.link-arrow {
+    margin-left: 15px;
+    font-size: 1.2rem;
+    color: #95a5a6;
+}
+
+@media (max-width: 768px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .link-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .link-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+    .link-number {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .link-arrow {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
