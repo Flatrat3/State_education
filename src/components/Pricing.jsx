@@ -10,7 +10,7 @@ const Pricing = () => {
                     <div className="pricing-card basic">
                         <div className="pricing-header">
                             <h3>Başlanğıc</h3>
-                            <div className="price">50 AZN<span>/ay</span></div>
+                            <div className="price">70 AZN<span>/ay</span></div>
                         </div>
                         <ul className="features-list">
                             <li>✅ Bütün fənlər üzrə video dərslər</li>
@@ -25,7 +25,7 @@ const Pricing = () => {
                         <div className="popular-tag">Ən Populyar</div>
                         <div className="pricing-header">
                             <h3>Professional</h3>
-                            <div className="price">70 AZN<span>/ay</span></div>
+                            <div className="price">100 AZN<span>/ay</span></div>
                         </div>
                         <ul className="features-list">
                             <li>✅ Bütün fənlər üzrə video dərslər</li>
@@ -39,7 +39,7 @@ const Pricing = () => {
                     <div className="pricing-card premium">
                         <div className="pricing-header">
                             <h3>VIP</h3>
-                            <div className="price">100 AZN<span>/ay</span></div>
+                            <div className="price">200 AZN<span>/ay</span></div>
                         </div>
                         <ul className="features-list">
                             <li>✅ Bütün imkanlar daxildir</li>

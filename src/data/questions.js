@@ -134,7 +134,12 @@ const questions = [
     },
     {
         id: 13,
-        question: "Dövlət qulluqçusunun vəzifələrinə aiddir:",
+        question: "Dövlət qulluqçusunun vəzifələrinə aiddir:\n" +
+            "1. Qanunvericiliyi və dövlət orqanlarının qəbul etdikləri başqa normativ hüquqi aktları həyata keçirmək\n" +
+            "2. Dövlət məvacibi almaq\n" +
+            "3. Rəhbərlərin öz səlahiyyəti hüdudunda verdikləri əmrləri, sərəncamları və göstərişləri yerinə yetirmək\n" +
+            "4. Dövlət orqanında müəyyən edilmiş qulluq reqlamentinə riayət etmək\n" +
+            "5. Əmanətlərdən (depozitlərdən), qiymətli kağızlardan, rentadan və icarədən gəlir götürmək",
         options: {
             A: "1, 3, 4",
             B: "1, 2, 3",
@@ -158,7 +163,7 @@ const questions = [
         id: 15,
         question: "“Dövlət qulluğu haqqında” Azərbaycan Respublikasının Qanununa əsasən 4-cü kateqoriya dövlət orqanıdır:",
         options: {
-            A: "hərbi məhkəmələr",
+            A: "rayon məhkəmələri",
             B: "inzibati-iqtisadi məhkəmələr",
             C: "apellyasiya məhkəmələri",
             D: "konstitusiya məhkəməsi"
@@ -185,7 +190,7 @@ const questions = [
             C: "mədəniyyət təsisatlarından və mədəni sərvətlərdən istifadə etmək",
             D: "sərbəst toplaşmaq"
         },
-        answer: "A"
+        answer: "B"
     },
     {
         id: 18,
@@ -196,7 +201,7 @@ const questions = [
             C: "Azərbaycan Respublikasının tərkibində muxtar dövlətdir",
             D: "Azərbaycan Respublikasının tərkibində federativ dövlətdir"
         },
-        answer: "A"
+        answer: "B"
     },
     {
         id: 19,
@@ -207,7 +212,7 @@ const questions = [
             C: "hər iki dildə şaquli şəkildə",
             D: "əvvəl xarici dildə, sonra dövlət dilində"
         },
-        answer: "D"
+        answer: "B"
     },
     {
         id: 20,
