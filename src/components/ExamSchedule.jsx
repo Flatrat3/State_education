@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { Capacitor } from '@capacitor/core';
 import './ExamSchedule.css';
 
 const ExamSchedule = () => {
@@ -10,7 +11,12 @@ const ExamSchedule = () => {
 
     const fetchExamData = async () => {
         try {
-            const response = await fetch('/api-dim/dqq/ImtQeyd');
+            const isNative = Capacitor.isNativePlatform();
+            const url = isNative
+                ? 'https://exidmet.dim.gov.az/dqq/ImtQeyd'
+                : '/api-dim/dqq/ImtQeyd';
+
+            const response = await fetch(url);
             if (!response.ok) {
                 throw new Error('Şəbəkə xətası baş verdi');
             }

@@ -1,0 +1,5 @@
+# API Proxy for Exam Schedule
+/api-dim/*  https://exidmet.dim.gov.az/:splat  200
+
+# SPA Fallback
+/*  /index.html  200

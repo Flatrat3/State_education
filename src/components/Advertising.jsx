@@ -3,7 +3,7 @@ import React from 'react';
 const Advertising = () => {
     // Placeholder number - User should update this
     const phoneNumber = "994708038365";
-    const message = encodeURIComponent("Salam, reklam ilə bağlı məlumat almaq istəyirəm.");
+    const message = encodeURIComponent("Salam, kursla bağlı məlumat almaq istəyirəm.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (

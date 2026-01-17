@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Dövlət Qulluğu Qanunvericilik – Asim Əhməd</string>
+    <string name="title_activity_main">Dövlət Qulluğu Qanunvericilik – Asim Əhməd</string>
+    <string name="package_name">com.state.education</string>
+    <string name="custom_url_scheme">com.state.education</string>
+</resources>
+
