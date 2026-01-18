@@ -120,6 +120,7 @@ const ExamSchedule = () => {
                         dateTime: dateText,
                         regStart: row.cells[2]?.innerText?.trim(),
                         regEnd: row.cells[3]?.innerText?.trim(),
+                        group: row.cells[8]?.innerText?.trim(),
                     });
                 }
             }
@@ -154,6 +155,7 @@ const ExamSchedule = () => {
                                     <th>İmtahan Tarixi</th>
                                     <th>Qeydiyyatın Başlanması</th>
                                     <th>Qeydiyyatın Bitməsi</th>
+                                    <th>Vəzifə qrupları</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -162,6 +164,7 @@ const ExamSchedule = () => {
                                         <td data-label="İmtahan Tarixi">{exam.dateTime}</td>
                                         <td data-label="Qeydiyyatın Başlanması">{exam.regStart}</td>
                                         <td data-label="Qeydiyyatın Bitməsi">{exam.regEnd}</td>
+                                        <td data-label="Vəzifə qrupları">{exam.group}</td>
                                     </tr>
                                 ))}
                             </tbody>
