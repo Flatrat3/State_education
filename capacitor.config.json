@@ -1,5 +1,9 @@
 {
   "appId": "com.state.education",
-  "appName": "State Education",
-  "webDir": "dist"
+  "appName": "DovletQullugu",
+  "webDir": "dist",
+  "server": {
+    "url": "https://dovletqullugu.net",
+    "cleartext": false
+  }
 }
