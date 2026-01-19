@@ -196,3 +196,86 @@
         /* Show all in slider mode */
     }
 }
+
+/* Search Box Integration */
+.videos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.videos-header .section-title {
+    margin-bottom: 0;
+}
+
+.youtube-search-container {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.youtube-search-form {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    /* Adjusted width */
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.youtube-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    outline: none;
+    min-width: 0;
+}
+
+.youtube-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.youtube-search-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.youtube-search-btn:hover {
+    background-color: #0056b3;
+    /* Fallback or specific hover color */
+}
+
+@media (max-width: 600px) {
+    .videos-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .youtube-search-container {
+        justify-content: center;
+    }
+
+    .youtube-search-form {
+        max-width: 100%;
+    }
+}

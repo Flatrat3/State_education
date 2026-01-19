@@ -7,7 +7,16 @@ const Header = () => {
     const [isUsefulLinksDropdownOpen, setIsUsefulLinksDropdownOpen] = useState(false);
     const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState('');
     const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm.trim()) {
+            const searchUrl = `https://www.youtube.com/@dovlet_qullugu/search?query=${encodeURIComponent(searchTerm)}`;
+            window.open(searchUrl, '_blank');
+        }
+    };
 
     return (
         <header className="header">
@@ -78,10 +87,23 @@ const Header = () => {
                             )}
                         </li>
                         <li><Link to="/tests" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Testlər</Link></li>
-                        {/* <li><a href="#pricing" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Qiymətlər</a></li> */}
                     </ul>
                 </nav>
-                <button className="cta-button" onClick={() => navigate('/tests')}>Başla</button>
+
+                <div className="header-search-container">
+                    <form onSubmit={handleSearch} className="header-search-form">
+                        <input
+                            type="text"
+                            placeholder="Axtar..."
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                            className="header-search-input"
+                        />
+                        <button type="submit" className="header-search-btn">🔍</button>
+                    </form>
+                </div>
+
+
             </div>
         </header>
     );

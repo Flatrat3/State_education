@@ -4,9 +4,18 @@ import './YouTubeSection.css';
 const YouTubeSection = () => {
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState('');
     const channelId = 'UCopXX7QjXNKpBuFV6JrZYcA';
     const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
     const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        if (searchTerm.trim()) {
+            const searchUrl = `https://www.youtube.com/@dovlet_qullugu/search?query=${encodeURIComponent(searchTerm)}`;
+            window.open(searchUrl, '_blank');
+        }
+    };
 
     useEffect(() => {
         fetch(apiUrl)
@@ -57,7 +66,24 @@ const YouTubeSection = () => {
                     </a>
                 </div>
 
-                <h3 className="section-title fade-in">Son Videolar</h3>
+                <div className="videos-header fade-in">
+                    <h3 className="section-title">Son Videolar</h3>
+                    <div className="youtube-search-container">
+                        <form onSubmit={handleSearch} className="youtube-search-form">
+                            <input
+                                type="text"
+                                placeholder="Kanalda axtarış..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="youtube-search-input"
+                            />
+                            <button type="submit" className="youtube-search-btn">
+                                🔍
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
 
                 <div className="videos-slider fade-in">
                     {loading ? (
