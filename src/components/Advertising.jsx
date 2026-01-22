@@ -9,7 +9,7 @@ const Advertising = () => {
     return (
         <section style={{
             padding: '0.8rem 0', // Much smaller padding
-            backgroundColor: '#25D366',
+            backgroundColor: '#005f73',
             color: 'white',
             textAlign: 'center',
             marginTop: '0', // Remove margin
@@ -36,7 +36,7 @@ const Advertising = () => {
                             display: 'inline-flex',
                             alignItems: 'center',
                             backgroundColor: 'white',
-                            color: '#25D366',
+                            color: '#005f73',
                             padding: '0.4rem 1.2rem', // Smaller button
                             borderRadius: '50px',
                             fontSize: '1rem',
