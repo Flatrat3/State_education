@@ -116,6 +116,18 @@ const legislationLinks = [
         title: "“Vətəndaşların Müraciətləri Haqqında” Qanun",
         url: "https://drive.google.com/file/d/16FNZmC45aArLdftcdrqgyFJdDIWcpaaZ/view?usp=sharing",
         icon: "📨"
+    },
+    {
+        id: 20,
+        title: "Normativ hüquqi aktlar haqqında” Konstitusiya Qanunu",
+        url: "https://drive.google.com/file/d/1vnmfaBvo4R15IHiXooKtMJiDuowYQRez/view?usp=sharing",
+        icon: "⚖️"
+    },
+    {
+        id: 21,
+        title: "Normativ hüquqi aktlar haqqında” Konstitusiya Qanunu Sual-cavab",
+        url: "https://drive.google.com/file/d/1ZiQ4TLhNGS-K5Pac6rqVtcgjkRy9SLym/view?usp=sharing",
+        icon: "⚖️"
     }
 ];
 
@@ -126,11 +138,11 @@ const UsefulLinksLegislation = () => {
                 <h2 className="section-title">Qanunvericilik - Faydalı Linklər</h2>
                 <div className="links-grid">
                     {legislationLinks.map((link) => (
-                        <a 
-                            key={link.id} 
-                            href={link.url} 
-                            target="_blank" 
-                            rel="noopener noreferrer" 
+                        <a
+                            key={link.id}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="link-card"
                         >
                             <span className="link-icon">{link.icon}</span>
