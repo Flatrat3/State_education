@@ -15,7 +15,7 @@ const laws = [
     { title: "Normativ Hüquqi aktlar haqqında Konstitusiya qanunu ", url: "https://drive.google.com/file/d/1iCPvFalquoj6sEJsfQGYP0wqM60j5LUN/view?usp=sharing" },
     { title: "Dövlət dili haqqında Qanun", url: "https://drive.google.com/file/d/1_n2_5unAugesMUoWCmnX50lRGq874vf2/view?usp=sharing" },
     { title: "İnzibati icraat haqqında Qanun", url: "https://drive.google.com/file/d/13_MJCxtjcwJvb-P4RuGIi5R4kq-ZiY89/view?usp=sharing" },
-    { title: "OMBUDSMAN haqqında Konstitusiya Qanunu", url: "https://drive.google.com/file/d/13_MJCxtjcwJvb-P4RuGIi5R4kq-ZiY89/view?usp=sharing" },
+    { title: "OMBUDSMAN haqqında Konstitusiya Qanunu", url: "https://drive.google.com/file/d/1n97J1gzv_qbtwGHIwPCZwP4RamG5vQTA/view?usp=sharing" },
     { title: "Məhkəmələr və hakimlər haqqında Qanun", url: "https://drive.google.com/file/d/10cbFn60RKDCQXkqhzSUCFfx8s3h1ritA/view?usp=sharing" },
     { title: "Elektron imza və elektron sənəd haqqında Qanun", url: "https://e-qanun.az/framework/5916" },
     { title: "AZƏRBAYCAN RESPUBLİKASININ MÜLKİ MƏCƏLLƏSİ ", url: "https://drive.google.com/file/d/1-UUe1yJ18lPtRo6Kr-_5QNqW5YjsM5xt/view?usp=sharing" },

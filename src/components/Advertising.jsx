@@ -1,10 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { fetchAndParseExams } from '../utils/examUtils';
 
 const Advertising = () => {
     // Placeholder number - User should update this
     const phoneNumber = "994708038365";
     const message = encodeURIComponent("Salam, kursla bağlı məlumat almaq istəyirəm.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    const [daysLeft, setDaysLeft] = useState(null);
+
+    useEffect(() => {
+        const getExamData = async () => {
+            try {
+                const exams = await fetchAndParseExams();
+                const now = new Date();
+
+                // Sort exams by date
+                const upcomingExams = exams
+                    .filter(exam => exam.dateObject && exam.dateObject > now)
+                    .sort((a, b) => a.dateObject - b.dateObject);
+
+                if (upcomingExams.length > 0) {
+                    const nextExam = upcomingExams[0];
+                    const nowReset = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                    const examDateReset = new Date(nextExam.dateObject.getFullYear(), nextExam.dateObject.getMonth(), nextExam.dateObject.getDate());
+
+                    const timeDiff = examDateReset - nowReset;
+                    const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                    setDaysLeft(days);
+                }
+            } catch (error) {
+                console.error("Failed to fetch exam for advertising:", error);
+            }
+        };
+
+        getExamData();
+    }, []);
 
     return (
         <section style={{
@@ -25,7 +56,7 @@ const Advertising = () => {
                     margin: '0 auto' // Remove auto centering to let it scroll freely? No, keyframes handle position.
                 }}>
                     <h2 style={{ fontSize: '1.2rem', margin: 0, color: 'white' }}>
-                        📢 Bizimlə Əməkdaşlıq Edin
+                        📢 {daysLeft !== null && daysLeft > 0 ? `Növbəti imtahana ${daysLeft} gün qaldı` : "Bizimlə Əməkdaşlıq Edin"}
                     </h2>
 
                     <a
@@ -37,7 +68,7 @@ const Advertising = () => {
                             alignItems: 'center',
                             backgroundColor: 'white',
                             color: '#005f73',
-                            padding: '0.4rem 1.2rem', // Smaller button
+                            padding: '0.4rem 1.2rem',
                             borderRadius: '50px',
                             fontSize: '1rem',
                             fontWeight: 'bold',
@@ -47,12 +78,9 @@ const Advertising = () => {
                         }}
                         onMouseOver={(e) => {
                             e.target.style.transform = 'scale(1.05)';
-                            // Pause animation on hover? 
-                            // e.currentTarget.parentElement.style.animationPlayState = 'paused';
                         }}
                         onMouseOut={(e) => {
                             e.target.style.transform = 'scale(1)';
-                            // e.currentTarget.parentElement.style.animationPlayState = 'running';
                         }}
                     >
                         <span style={{ marginRight: '6px', fontSize: '1.2rem' }}>💬</span>
