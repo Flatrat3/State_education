@@ -56,7 +56,7 @@ const Advertising = () => {
                     margin: '0 auto' // Remove auto centering to let it scroll freely? No, keyframes handle position.
                 }}>
                     <h2 style={{ fontSize: '1.2rem', margin: 0, color: 'white' }}>
-                        📢 {daysLeft !== null && daysLeft > 0 ? `Növbəti imtahana ${daysLeft} gün qaldı` : "Bizimlə Əməkdaşlıq Edinnnn"}
+                        📢 {daysLeft !== null && daysLeft > 0 ? `Növbəti imtahana ${daysLeft} gün qaldı` : "Bizimlə Əməkdaşlıq Edin"}
                     </h2>
 
                     <a
