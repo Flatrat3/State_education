@@ -22,5 +22,16 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+
+  server: {
+    proxy: {
+      '/api-dim': {
+        target: 'https://exidmet.dim.gov.az',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-dim/, ''),
+        secure: false,
+      }
+    }
+  }
 })

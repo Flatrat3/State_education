@@ -5,7 +5,7 @@ export const fetchAndParseExams = async () => {
     const isNative = Capacitor.isNativePlatform();
 
     // Helper to validate response
-    const isValidResponse = (text) => text && text.length > 100 && text.includes('<table');
+    const isValidResponse = (text) => text && text.length > 500 && text.includes('<table') && text.includes('<tr');
 
     // List of strategies to try
     const strategies = [
