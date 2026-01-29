@@ -7,55 +7,52 @@ export const fetchAndParseExams = async () => {
     // Helper to validate response
     const isValidResponse = (text) => text && text.length > 100 && text.includes('<table');
 
-    // Strategy 1: Primary (Native Direct or Local Proxy)
-    try {
-        const url = isNative ? targetUrl : '/api-dim/dqq/ImtQeyd';
-        console.log("Attempting Strategy 1 (Primary):", url);
-
-        const response = await fetch(url);
-        if (!response.ok) throw new Error(`Primary fetch failed: ${response.status}`);
-
-        const text = await response.text();
-        if (!isValidResponse(text)) throw new Error('Primary response invalid');
-
-        return parseExamData(text);
-    } catch (err) {
-        console.warn("Strategy 1 failed:", err);
-    }
-
-    // Strategy 2: corsproxy.io (Best specialized CORS proxy)
-    if (!isNative) {
-        try {
-            // corsproxy.io requires the target URL to be appended directly
-            const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`;
-            console.log("Attempting Strategy 2 (corsproxy.io):", proxyUrl);
-
-            const response = await fetch(proxyUrl);
-            if (!response.ok) throw new Error(`Strategy 2 failed: ${response.status}`);
-
-            const text = await response.text();
-            // corsproxy.io might return the proxy page itself on error, so check content
-            if (!isValidResponse(text)) throw new Error('Strategy 2 response invalid');
-
-            return parseExamData(text);
-        } catch (err) {
-            console.warn("Strategy 2 failed:", err);
+    // List of strategies to try
+    const strategies = [
+        {
+            name: "Native/Local Proxy",
+            url: isNative ? targetUrl : '/api-dim/dqq/ImtQeyd',
+            condition: () => true // Always try first (works for native and local dev)
+        },
+        {
+            name: "AllOrigins",
+            url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
+            condition: () => !isNative // Only web
+        },
+        {
+            name: "CodeTabs",
+            url: `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`,
+            condition: () => !isNative
+        },
+        {
+            name: "CorsProxy.io",
+            url: `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
+            condition: () => !isNative
         }
+    ];
 
-        // Strategy 3: allorigins (Backup)
+    for (const strategy of strategies) {
+        if (!strategy.condition()) continue;
+
         try {
-            const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`;
-            console.log("Attempting Strategy 3 (allorigins):", proxyUrl);
+            console.log(`Attempting Strategy: ${strategy.name} (${strategy.url})`);
+            const response = await fetch(strategy.url);
 
-            const response = await fetch(proxyUrl);
-            if (!response.ok) throw new Error(`Strategy 3 failed: ${response.status}`);
+            if (!response.ok) {
+                console.warn(`${strategy.name} failed with status: ${response.status}`);
+                continue;
+            }
 
             const text = await response.text();
-            if (!isValidResponse(text)) throw new Error('Strategy 3 response invalid');
 
-            return parseExamData(text);
+            if (isValidResponse(text)) {
+                console.log(`${strategy.name} succeeded!`);
+                return parseExamData(text);
+            } else {
+                console.warn(`${strategy.name} returned invalid content`);
+            }
         } catch (err) {
-            console.error("Strategy 3 failed. All strategies exhausted:", err);
+            console.warn(`${strategy.name} error:`, err);
         }
     }
 
