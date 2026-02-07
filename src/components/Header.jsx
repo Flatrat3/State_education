@@ -66,6 +66,7 @@ const Header = () => {
                                     <li><a href="#logic-links" onClick={() => setIsMobileMenuOpen(false)}>Məntiq</a></li>
                                     <li><a href="#language-links" onClick={() => setIsMobileMenuOpen(false)}>Ana dili</a></li>
                                     <li><Link to="/useful-links/legislation" onClick={() => setIsMobileMenuOpen(false)}>Qanunvericilik</Link></li>
+                                    <li><Link to="/lesson-planner" onClick={() => setIsMobileMenuOpen(false)}>Dərs Planlayıcısı</Link></li>
                                     <li><a href="#informatics-links" onClick={() => setIsMobileMenuOpen(false)}>İnformatika</a></li>
                                 </ul>
                             )}

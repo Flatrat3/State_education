@@ -13,6 +13,7 @@ import Chatbot from './components/Chatbot';
 import UsefulLinksLegislation from './pages/UsefulLinksLegislation';
 import CoursesLegislation from './pages/CoursesLegislation';
 import TeachersLegislation from './pages/TeachersLegislation';
+import LessonPlanner from './pages/LessonPlanner';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/useful-links/legislation" element={<UsefulLinksLegislation />} />
             <Route path="/courses/legislation" element={<CoursesLegislation />} />
             <Route path="/teachers/legislation" element={<TeachersLegislation />} />
+            <Route path="/lesson-planner" element={<LessonPlanner />} />
           </Routes>
         </main>
         <Footer />
