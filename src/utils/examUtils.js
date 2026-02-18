@@ -9,11 +9,7 @@ export const fetchAndParseExams = async () => {
 
     // List of strategies to try
     const strategies = [
-        {
-            name: "Native/Local Proxy",
-            url: isNative ? targetUrl : '/api-dim/dqq/ImtQeyd',
-            condition: () => true // Always try first (works for native and local dev)
-        },
+
         {
             name: "AllOrigins",
             url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
