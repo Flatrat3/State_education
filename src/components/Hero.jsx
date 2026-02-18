@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Hero.css';
 import './Hero.css';
+import heroImage from '../assets/hero-main.png';
 
 const Hero = () => {
     const [videos, setVideos] = React.useState([]);
