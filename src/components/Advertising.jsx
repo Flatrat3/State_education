@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchAndParseExams } from '../utils/examUtils';
+
 
 const Advertising = () => {
     // Placeholder number - User should update this
@@ -7,35 +7,8 @@ const Advertising = () => {
     const message = encodeURIComponent("Salam, kursla bağlı məlumat almaq istəyirəm.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
-    const [daysLeft, setDaysLeft] = useState(null);
-
-    useEffect(() => {
-        const getExamData = async () => {
-            try {
-                const exams = await fetchAndParseExams();
-                const now = new Date();
-
-                // Sort exams by date
-                const upcomingExams = exams
-                    .filter(exam => exam.dateObject && exam.dateObject > now)
-                    .sort((a, b) => a.dateObject - b.dateObject);
-
-                if (upcomingExams.length > 0) {
-                    const nextExam = upcomingExams[0];
-                    const nowReset = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-                    const examDateReset = new Date(nextExam.dateObject.getFullYear(), nextExam.dateObject.getMonth(), nextExam.dateObject.getDate());
-
-                    const timeDiff = examDateReset - nowReset;
-                    const days = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-                    setDaysLeft(days);
-                }
-            } catch (error) {
-                console.error("Failed to fetch exam for advertising:", error);
-            }
-        };
-
-        getExamData();
-    }, []);
+    // const [daysLeft, setDaysLeft] = useState(null); // Removed exam fetching
+    const daysLeft = null;
 
     return (
         <section style={{
