@@ -13,7 +13,9 @@ const Hero = () => {
     React.useEffect(() => {
         const fetchVideos = async () => {
             try {
-                const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+                // Use uploads playlist ID (UU...) instead of channel ID for better reliability with rss2json
+                const uploadsPlaylistId = channelId.replace('UC', 'UU');
+                const rssUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${uploadsPlaylistId}`;
                 const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
                 const response = await fetch(apiUrl);
                 const data = await response.json();

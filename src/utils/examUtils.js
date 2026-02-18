@@ -9,11 +9,10 @@ export const fetchAndParseExams = async () => {
 
     // List of strategies to try
     const strategies = [
-
         {
             name: "AllOrigins",
             url: `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
-            condition: () => !isNative // Only web
+            condition: () => !isNative
         },
         {
             name: "CodeTabs",
