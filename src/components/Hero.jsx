@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Hero.css';
 import './Hero.css';
 import heroImage from '../assets/hero-main.png';
+import youtubeData from '../data/youtube.json';
 
 const Hero = () => {
     const [videos, setVideos] = React.useState([]);
@@ -13,12 +14,7 @@ const Hero = () => {
     React.useEffect(() => {
         const fetchVideos = async () => {
             try {
-                // Use uploads playlist ID (UU...) instead of channel ID for better reliability with rss2json
-                const uploadsPlaylistId = channelId.replace('UC', 'UU');
-                const rssUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${uploadsPlaylistId}`;
-                const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-                const response = await fetch(apiUrl);
-                const data = await response.json();
+                const data = { items: youtubeData };
 
                 if (data.items) {
                     // Start with all items
@@ -28,11 +24,11 @@ const Hero = () => {
                         const j = Math.floor(Math.random() * (i + 1));
                         [allItems[i], allItems[j]] = [allItems[j], allItems[i]];
                     }
-                    // Take first 4
-                    const selectedVideos = allItems.slice(0, 4).map(item => ({
-                        id: item.guid,
+                    // Take first 5
+                    const selectedVideos = allItems.slice(0, 5).map(item => ({
+                        id: item.id,
                         title: item.title,
-                        thumbnail: `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/hqdefault.jpg`,
+                        thumbnail: item.thumbnail,
                         link: item.link
                     }));
                     setVideos(selectedVideos);

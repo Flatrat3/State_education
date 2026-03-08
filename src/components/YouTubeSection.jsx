@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './YouTubeSection.css';
+import youtubeData from '../data/youtube.json';
 
 const YouTubeSection = () => {
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const channelId = 'UCopXX7QjXNKpBuFV6JrZYcA';
-    // Use uploads playlist ID (UU...) instead of channel ID for better reliability with rss2json
-    const uploadsPlaylistId = channelId.replace('UC', 'UU');
-    const rssUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${uploadsPlaylistId}`;
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -20,26 +17,23 @@ const YouTubeSection = () => {
     };
 
     useEffect(() => {
-        fetch(apiUrl)
-            .then(res => res.json())
-            .then(data => {
-                if (data.items) {
-                    const formattedVideos = data.items.slice(0, 3).map(item => ({
-                        id: item.guid,
-                        title: item.title,
-                        thumbnail: `https://i.ytimg.com/vi/${item.guid.split(':')[2]}/hqdefault.jpg`,
-                        url: item.link,
-                        views: "Yeni", // View count is not in RSS, marking as New
-                        date: new Date(item.pubDate).toLocaleDateString("az-AZ")
-                    }));
-                    setVideos(formattedVideos);
-                }
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Error fetching YouTube videos:", err);
-                setLoading(false);
-            });
+        try {
+            if (youtubeData && youtubeData.length > 0) {
+                const formattedVideos = youtubeData.slice(0, 3).map(item => ({
+                    id: item.id,
+                    title: item.title,
+                    thumbnail: item.thumbnail,
+                    url: item.link,
+                    views: item.views || "Yeni",
+                    date: item.date || "Yeni"
+                }));
+                setVideos(formattedVideos);
+            }
+        } catch (err) {
+            console.error("Error loading YouTube videos:", err);
+        } finally {
+            setLoading(false);
+        }
     }, []);
 
     const channelInfo = {
