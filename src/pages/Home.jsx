@@ -16,8 +16,8 @@ const Home = () => {
     return (
         <>
             <Advertising />
-            <SalaryCalculator />
             <Motivation />
+            <SalaryCalculator />
             <Hero />
             <DailyQuestion />
 
