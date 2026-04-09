@@ -8,7 +8,6 @@ import PdfSection from '../components/PdfSection';
 import DailyQuestion from '../components/DailyQuestion';
 import Motivation from '../components/Motivation';
 import RandomTest from '../components/RandomTest';
-import SalaryCalculator from '../components/SalaryCalculator';
 
 import Advertising from '../components/Advertising';
 
@@ -17,7 +16,6 @@ const Home = () => {
         <>
             <Advertising />
             <Motivation />
-            <SalaryCalculator />
             <Hero />
             <DailyQuestion />
 
